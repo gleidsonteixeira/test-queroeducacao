@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 2020 12:12:12 GMT">
+    <meta http-equiv="cache-control" content="must-revalidate, public" max-age=31557600/>
+    <meta http-equiv="Pragma" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="Gleidson Teixeira, gleidsondeveloper@gmail.com"/>
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt-br" />   
+
+    <title>Desafio Quero Bolsas</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" media="all"/> -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" media="all">
+
+</head>
+<body class="cinza">
+    <header class="branco">
+        <div class="ajuda">
+            <i class="fa fa-info"></i>
+            <span class="azul-p-text">Ajuda</span>
+        </div>
+        <div class="logo">
+            <figure>
+                <img src="img/logo-querobolsa.svg" alt="Logo-Quero-Bolsa">
+            </figure>
+        </div>
+        <div class="conta">
+            <i class="fa fa-user-circle"></i>
+            <span class="azul-p-text">Conta</span>
+        </div>
+    </header>
+    <div class="menu azul-p">
+        <h5>
+            <b class="branco-text">Minha conta</b>
+            <span class="menu-btn branco-text">Menu <i class="fa fa-chevron-down branco-text"></i></span>
+        </h5>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#!">Pré-matrículas</a>
+                </li>
+                <li>
+                    <a href="#!" class="active">Bolsas favoritas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <a href="#!"><i class="fa fa-chevron-left"></i> <b>Minha conta</b></a>
+                </li>
+            </ul>
+        </div>
+        <div class="conteudo">
+            <h2>Bolsas favoritas</h2>
+            <p>Adicione bolsas de cursos e faculdades do seu interesse e receba atualizações com as melhores ofertas disponíveis.</p>
+        </div>
+        <div class="semestres">
+            <ul>
+                <li><b>Todos os semestres</b></li>
+                <li><b>2º semestre de 2019</b></li>
+                <li><b>1º semestre de 2020</b></li>
+            </ul>
+        </div>
+        <div class="bolsas">
+            <div class="add-bolsa branco click">
+                <i class="fa fa-plus azul-p-text"></i>
+                <h6>Adicionar bolsa</h6>
+                <p>Clique para adicionar bolsas de cursos do seu interesse</p>
+            </div>
+        </div>
+        <div class="modal">
+            <form>
+                <i class="fa fa-times branco-text"></i>
+                <div class="branco box">
+                    <h4>Adicionar bolsa</h4>
+                    <p>Filtre e adicione  as bolsas de seu interesse.</p>
+                    <h6>Selecione sua cidade</h6>
+                    <select >
+                        <option value="1">cidade 1</option>
+                        <option value="1">cidade 2</option>
+                        <option value="1">cidade 3</option>
+                    </select>
+                    <h6>Selecione o curso de sua preferência</h6>
+                    <select >
+                        <option value="1">cidade 1</option>
+                        <option value="1">cidade 2</option>
+                        <option value="1">cidade 3</option>
+                    </select>
+                    <h6>Como você quer estudar</h6>
+                    <div class="opcao">
+                        <input type="checkbox" name="" id="">
+                        Presencial
+                    </div>
+                    <div class="opcao">
+                        <input type="checkbox" name="" id="">
+                        A distância
+                    </div>
+                    <div class="clear"></div>
+                    <h6>Até quanto você pode pagar?</h6>
+                    <span class="valor-max">R$ 10.000</span>
+                    <input type="range" name="" id="" max="10000">
+                    <h6>Resultado: <span>Ordenar por</span></h6>
+                    <div class="filtro">
+                        <select>
+                            <option value="1">Nome da Faculdade</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>    
+                    </div>
+                    <ul id="resultados">
+                        <li>
+                            <input type="checkbox">
+                            <img src="img/logo-querobolsa.svg">
+                            <div class="infos">
+                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
+                                <h6 class="curso-tipo">Bacharelado</h6>
+                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
+                                <h6 class="curso-valor"><b class="verde-text">R$ 374//mês</b>></h6>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <img src="img/logo-querobolsa.svg">
+                            <div class="infos">
+                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
+                                <h6 class="curso-tipo">Bacharelado</h6>
+                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
+                                <h6 class="curso-valor"><b class="verde-text">R$ 374//mês</b>></h6>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <img src="img/logo-querobolsa.svg">
+                            <div class="infos">
+                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
+                                <h6 class="curso-tipo">Bacharelado</h6>
+                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
+                                <h6 class="curso-valor"><b class="verde-text">R$ 374//mês</b>></h6>
+                            </div>
+                        </li>
+                    </ul>
+                    <button>Cancelar</button>
+                    <button>Adicionar bolsa(s)</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="azul-p">
+        <div class="contatos">
+            <ul>
+                <li class="azul-s">
+                    <i class="fa fa-whatsapp"></i>
+                    <a href="tel:+558508001232222">
+                        <b>0800 123 2222</b>
+                        <h6>Segunda a sexta de 8h às 22h</h6>
+                    </a>
+                </li>
+                <li class="azul-s">
+                    <i class="fa fa-comments"></i>
+                    <b>Chat</b>
+                </li>
+                <li class="azul-s">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:contato@queroeducacao.com.br">
+                        <b>Email</b>
+                    </a>
+                </li>
+                <li class="azul-s">
+                    <i class="fa fa-info"></i>
+                    <b>Ajuda</b>
+                </li>
+            </ul>
+        </div>
+        <div class="rodape branco-text">Feito com <i class="fa fa-favorite"></i> pela Quero Educação</div>
+    </footer>
+    
+</body>
+</html>

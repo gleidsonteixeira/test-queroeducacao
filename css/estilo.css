@@ -1,0 +1,88 @@
+/** RESET **/
+
+*{color: #1F2D30;font-family: 'Montserrat', sans-serif;}
+body{padding: 0;margin: 0;}
+figure{margin: 0;}
+ul{list-style: none;margin: 0;padding: 0;}
+a{text-decoration: none;display: block;}
+.marcador{outline:1px solid red;outline-offset: -1px;}
+.click{cursor: pointer;}
+.clear{clear: both;}
+
+/** CORES **/
+
+.azul-p{background-color: #18ACC4;}
+.azul-s{background-color: #007A8D;}
+.azul-p-text{color: #18ACC4;}
+.azul-s-text{color: #007A8D;}
+.amarelo-p{background-color: #FDCB13;}
+.amarelo-s{background-color: #DE9E1F;}
+.verde{background-color: #0FA866;}
+.preto{background-color: #1F2D30;}
+.cinza{background-color: #FBFBFB;}
+.branco{background-color: #FFFFFF;}
+.branco-text{color: #FFFFFF;}
+
+/** HEADER **/
+
+header{overflow: hidden;height: 80px;box-shadow: 0px 5px 8px rgba(29, 43, 46,.15);position: relative;z-index: 1;}
+header .ajuda{width:70px;height:60px;float: left;text-align: center;padding-top: 16px;position: relative;}
+header .ajuda::before{content: "";width: 2px;height: 50px;background-color: #dedede;position: absolute;top:15px;left: 100%;}
+header .ajuda i{display: block;font-size: 22px;}
+header .ajuda span{display: block;font-size: 14px;margin-top: 6px;}
+header .logo{width:calc(100% - 140px);float: left;}
+header .logo img{height: 55px;margin: 10px auto;display:block;}
+header .conta{width:70px;height:60px;float: right;text-align: center;padding-top: 16px;position: relative;}
+header .conta::before{content: "";width: 2px;height: 50px;background-color: #dedede;position: absolute;top:15px;right: 100%;}
+header .conta i{display: block;font-size: 22px;}
+header .conta span{display: block;font-size: 14px;margin-top: 6px;}
+
+.menu{height: 50px;position: relative;}
+.menu h5{margin: 0;line-height: 50px;padding: 0 16px;font-size: 18px;}
+.menu h5 span{float: right;}
+.menu ul{margin: 0;height: 40px;display: none;}
+
+.modal{width: 100%;height: 100%;position: fixed;top: 0;left: 0;background-color: rgba(31, 45, 48, .88);z-index: 100;}
+.modal .box{padding: 16px;overflow: hidden;}
+.modal .box h4{font-size: 28px;margin-top: 10px;margin-bottom: 0;}
+.modal .box p{margin-top: 10px;font-size: 17px;}
+.modal .box h6{text-transform: uppercase;}
+
+main{padding: 16px;}
+main .breadcrumb{margin-top: 20px;}
+main .breadcrumb a{font-size: 17px;}
+main .breadcrumb a i{color: #007A8D;margin-right: 10px;}
+main .breadcrumb a b{color: #007A8D;}
+
+main .conteudo h2{font-size: 36px;margin-top: 40px;margin-bottom: 20px;}
+main .conteudo p{font-size: 17px;line-height: 28px;}
+
+main .semestres{margin: 30px 0;}
+main .semestres ul li{text-align: center;line-height: 50px;border: 1px solid #007A8D;}
+main .semestres ul li b{color: #007A8D;}
+main .semestres ul li:first-child{background-color: #007A8D;border-radius: 5px 5px 0 0;}
+main .semestres ul li:first-child b{color: white;}
+main .semestres ul li:last-child{border-radius: 0 0 5px 5px;}
+
+.bolsas{margin-bottom: 30px;}
+.bolsas .add-bolsa{box-shadow: 0px 4px 7px rgba(29, 43, 46,.15);text-align: center;padding: 30px;}
+.bolsas .add-bolsa i{width: 60px;height: 60px;line-height: 60px;border: 2px solid #18ACC4;border-radius: 40px;font-size: 36px;box-sizing: border-box;margin-bottom:24px;}
+.bolsas .add-bolsa h6{font-size: 22px;font-weight: bold;margin: 0;}
+.bolsas .add-bolsa p{line-height: 24px;margin-top: 8px;}
+
+
+
+
+footer{}
+footer .contatos ul{overflow: hidden;}
+footer .contatos ul li{width: 33.333%;float: left;text-align: center;padding: 10px 0;overflow: hidden;box-sizing: border-box;}
+footer .contatos ul li:first-child{width: 100%;text-align: left;padding: 16px 60px;border-bottom: 2px solid #50d3e8;}
+footer .contatos ul li:first-child i{float: left;margin-right: 16px;}
+footer .contatos ul li:nth-child(3){border-left: 2px solid #50d3e8;border-right: 2px solid #50d3e8;}
+footer .contatos ul li b{display: block;color:white;margin-bottom: 6px;}
+footer .contatos ul li h6{margin: 0;color:white;}
+footer .contatos ul li i{width: 40px;height: 40px;line-height: 40px;text-align: center;color:white;font-size: 28px;}
+footer .rodape{padding: 40px;text-align: center;}
+
+
+
