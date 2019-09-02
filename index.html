@@ -79,128 +79,41 @@
                 <h6>Adicionar bolsa</h6>
                 <p>Clique para adicionar bolsas de cursos do seu interesse</p>
             </div>
-            <ul id="bolsas-selecionadas">
-                <li class="branco">
-                    <img src="img/anhanguera.png" alt="logo-anhanguera">
-                    <h6 class="curso-instituicao upper">anhanguera</h6>
-                    <h6 class="curso-nome azul-s-text">Arquitetura e Urbanismo</h6>
-                    <div class="avaliacoes">
-                        <span class="curso-nota">3.8</span>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star-half-o"></i>
-                        <i class="amarelo-p-text fa fa-star-o"></i>
-                    </div>
-                    <div class="periodo">
-                        <h6 class="upper">presencial<span></span>noite</h6>
-                        <p>Início das aulas em: 05/03/2020</p>
-                    </div>
-                    <div class="mensalidade">
-                        <h6>Mensalidade com o Quero Bolsa:</h6>
-                        <span><strike>R$ 1.487,31</strike></span>
-                        <h5><b class="verde-text">R$ 453,63</b> /mês</h5>
-                    </div>
-                    <button class="esquerda">Excluir</button>
-                    <button class="direita active">Ver oferta</button>
-                </li>
-                <li class="branco">
-                    <img src="img/anhanguera.png" alt="logo-anhanguera">
-                    <h6 class="curso-instituicao upper">anhanguera</h6>
-                    <h6 class="curso-nome azul-s-text">Design Gráfico</h6>
-                    <div class="avaliacoes">
-                        <span class="curso-nota">3.8</span>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star-half-o"></i>
-                        <i class="amarelo-p-text fa fa-star-o"></i>
-                    </div>
-                    <div class="periodo">
-                        <h6 class="upper">presencial<span></span>noite</h6>
-                        <p>Início das aulas em: 05/03/2020</p>
-                    </div>
-                    <div class="mensalidade">
-                        <h6>Bolsa indisponível.</h6>
-                        <p>Entre em contato com nosso atendimento para saber mais.</p>
-                    </div>
-                    <button class="esquerda">Excluir</button>
-                    <button class="direita inactive">Indisponível</button>
-                </li>
-            </ul>
+            <ul id="bolsas-selecionadas"></ul>
         </div>
-        <div class="modal">
+        <div class="modal suave">
             <form>
                 <i class="fa fa-times branco-text fechar"></i>
                 <div class="clear"></div>
-                <div class="branco box">
+                <div class="branco box suave">
                     <h4>Adicionar bolsa</h4>
                     <p>Filtre e adicione  as bolsas de seu interesse.</p>
                     <h6>Selecione sua cidade</h6>
-                    <select >
-                        <option value="1">cidade 1</option>
-                        <option value="1">cidade 2</option>
-                        <option value="1">cidade 3</option>
-                    </select>
+                    <select id="listaCidades"></select>
                     <h6>Selecione o curso de sua preferência</h6>
-                    <select >
-                        <option value="1">cidade 1</option>
-                        <option value="1">cidade 2</option>
-                        <option value="1">cidade 3</option>
-                    </select>
+                    <select id="listaCursos"></select>
                     <h6>Como você quer estudar</h6>
                     <div class="opcao">
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" checked="checked" class="presencial">
                         Presencial
                     </div>
                     <div class="opcao">
-                        <input type="checkbox" name="" id="">
+                        <input type="checkbox" checked="checked" class="ead">
                         A distância
                     </div>
                     <div class="clear"></div>
                     <h6>Até quanto você pode pagar?</h6>
-                    <p class="valor-max">R$ 10.000</p>
-                    <input type="range" max="10000">
+                    <p class="valor-max">R$ <span>10.000</span></p>
+                    <input type="range" min="0" max="10000" value="10000" class="valor-max-input">
                     <h6>Resultado: <span class="direita">Ordenar por</span></h6>
                     <div class="filtro">
                         <select>
                             <option value="1">Nome da Faculdade</option>
                         </select>
                     </div>
-                    <ul id="resultados">
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="esquerda">Cancelar</button>
-                    <button class="direita inactive">Adicionar bolsa(s)</button>
+                    <ul id="resultados"></ul>
+                    <button type="button" class="esquerda cancelar">Cancelar</button>
+                    <button type="button" class="direita inactive confirmar" disabled>Adicionar bolsa(s)</button>
                     <div class="clear"></div>
                 </div>
             </form>
@@ -235,5 +148,10 @@
         <div class="rodape branco-text">Feito com <i class="fa fa-heart branco-text"></i> pela Quero Educação</div>
     </footer>
     
+    <script src="js/jquery.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+
+    </script>
 </body>
 </html>
