@@ -68,7 +68,9 @@ function listaCursos(){
                     item.setAttribute("data-tipo", o.course.kind);
                     item.setAttribute("data-valor", Math.round(o.price_with_discount));
                 var html =  '<div class="checkbox">'+
-                                '<input type="checkbox" data-id="'+obj.indexOf(o)+'">'+
+                                '<span>'+
+                                    '<input type="checkbox" data-id="'+obj.indexOf(o)+'">'+
+                                '</span>'+
                             '</div>'+
                             '<figure>'+
                                 '<img src="'+o.university.logo_url+'">'+
