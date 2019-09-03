@@ -37,13 +37,13 @@ a{text-decoration: none;display: block;}
 header{overflow: hidden;height: 60px;box-shadow: 0px 5px 8px rgba(29, 43, 46,.15);position: relative;z-index: 1;}
 header .ajuda{width:60px;height:60px;float: left;text-align: center;padding-top: 12px;position: relative;}
 header .ajuda::before{content: "";width: 2px;height: 44px;background-color: #dedede;position: absolute;top:8px;left: 100%;}
-header .ajuda i{display: block;font-size: 22px;}
+header .ajuda i{display: block;font-size: 22px;margin-bottom: 3px;}
 header .ajuda span{display: block;font-size: 12px;font-weight: bold;}
 header .logo{width:calc(100% - 140px);float: left;}
 header .logo img{height: 40px;margin: 10px auto;display:block;}
 header .conta{width:60px;height:60px;float: right;text-align: center;padding-top: 12px;position: relative;}
 header .conta::before{content: "";width: 2px;height: 44px;background-color: #dedede;position: absolute;top:8px;right: 100%;}
-header .conta i{display: block;font-size: 22px;}
+header .conta i{display: block;font-size: 22px;margin-bottom: 3px;}
 header .conta span{display: block;font-size: 12px;font-weight: bold;}
 
 .menu{min-height: 50px;position: relative;z-index: 1;}
@@ -63,6 +63,7 @@ header .conta span{display: block;font-size: 12px;font-weight: bold;}
 .modal .box p{margin-top: 0;font-size: 14px;}
 .modal .box h6{text-transform: uppercase;margin-bottom: 4px;}
 .modal .box select{height: 40px;width: 100%;border: 1px solid #dedede;border-radius: 5px;padding: 0 10px;-webkit-appearance: none;-moz-appearance: none;appearance: none;-ms-word-break: normal;word-break: normal;}
+.modal .box select:focus{outline-color: #18ACC4;}
 .modal .box select::-ms-expand {display: none;}
 .modal .box .opcao{overflow: hidden;font-size: 14px;float: left;margin-right: 30px;margin-top: 18px;}
 .modal .box .opcao input{float: left;margin-right: 10px;}
@@ -84,8 +85,28 @@ header .conta span{display: block;font-size: 12px;font-weight: bold;}
 .modal .box .filtro::after{content: '\f078';font: normal normal normal 16px/1 FontAwesome;color: #007A8D;right: 0;top: 12px;height: 34px;position: absolute;pointer-events: none;}
 .modal .box #resultados{border-top: 2px solid #dedede;}
 .modal .box #resultados li{overflow: hidden;padding: 16px 0 20px 0;border-bottom: 2px solid #dedede;position: relative;width: 100%;}
+.modal .box #resultados li.city-on{display: block;}
+.modal .box #resultados li.city-off{display: none;}
+.modal .box #resultados li.city-on.curso-on{display: block;}
+.modal .box #resultados li.city-on.curso-off{display: none;}
+.modal .box #resultados li.city-on.presencial-on{display: block;}
+.modal .box #resultados li.city-on.presencial-off{display: none;}
+.modal .box #resultados li.city-on.ead-on{display: block;}
+.modal .box #resultados li.city-on.ead-off{display: none;}
+.modal .box #resultados li.city-on.valor-on{display: block;}
+.modal .box #resultados li.city-on.valor-off{display: none;}
+.modal .box #resultados li.city-on.ead-off.valor-on,
+.modal .box #resultados li.city-on.presencial-off.valor-on{display: none;}
+.modal .box #resultados li.city-on.curso-on.presencial-on,
+.modal .box #resultados li.city-on.curso-on.ead-on{display: block;}
+.modal .box #resultados li.city-on.curso-off.presencial-on,
+.modal .box #resultados li.city-on.curso-off.ead-on{display: none;}
+.modal .box #resultados li.city-on.curso-on.presencial-on.valor-on,
+.modal .box #resultados li.city-on.curso-on.ead-on.valor-on{display: block;}
+.modal .box #resultados li.city-on.curso-on.presencial-on.valor-off,
+.modal .box #resultados li.city-on.curso-on.ead-on.valor-off{display: none;}
 .modal .box #resultados li .checkbox{width: 10%;height:100%;position: absolute;top: 0;left: 0;}
-.modal .box #resultados li .checkbox input{position: relative;top: 50%;transform: translateY(-50%);}
+.modal .box #resultados li .checkbox span{position: relative;top: 50%;transform: translateY(-50%);opacity: 0;width: 14px;height: 14px;background-color: #18ACC4;}
 .modal .box #resultados li figure{width: 40%;height: 100%;position: absolute;top: 0;left: 10%;}
 .modal .box #resultados li figure img{width: 100%;position: relative;top: 50%;transform: translateY(-50%);padding: 0 25px 0 5px;box-sizing: border-box;}
 .modal .box #resultados li .infos{width: 50%;float: right;}
@@ -98,8 +119,6 @@ header .conta span{display: block;font-size: 12px;font-weight: bold;}
 .modal .box button{line-height: 40px;border-radius: 5px;padding: 0 26px;background-color: transparent;border: 1px solid #007A8D;color: #007A8D;font-weight: bold;margin: 25px 0;}
 .modal .box button.inactive{background-color: #dedede;border-color: #999;color: #777;}
 .modal .box button.active{background-color: #FDCB13;border-color: #DE9E1F;color: #000;}
-
-
 
 main{padding: 16px;}
 main .breadcrumb{margin-top: 10px;}
@@ -141,18 +160,13 @@ main .semestres ul li:last-child{border-radius: 0 0 5px 5px;}
 .bolsas #bolsas-selecionadas li button.inactive{background-color: #dedede;border-color: #999;color: #777;}
 .bolsas #bolsas-selecionadas li button.active{background-color: #FDCB13;border-color: #DE9E1F;color: #000000;}
 
-
-
-
-
-footer{}
 footer .contatos ul{overflow: hidden;}
 footer .contatos ul li{width: 33.333%;float: left;text-align: center;padding: 10px 0;overflow: hidden;box-sizing: border-box;font-size: 14px;}
 footer .contatos ul li:first-child{width: 100%;text-align: left;padding: 16px 60px;border-bottom: 2px solid #50d3e8;}
 footer .contatos ul li:first-child i{float: left;margin-right: 16px;}
 footer .contatos ul li:nth-child(3){border-left: 2px solid #50d3e8;border-right: 2px solid #50d3e8;}
 footer .contatos ul li b{display: block;color:white;margin-bottom: 6px;}
-footer .contatos ul li h6{margin: 0;color:white;font-weight: 500;}
+footer .contatos ul li h6{margin: 0;color:white;font-weight: 500;font-size: 11px;}
 footer .contatos ul li i{width: 40px;height: 40px;line-height: 40px;text-align: center;color:white;font-size: 28px;}
 footer .rodape{padding: 35px;text-align: center;font-size: 12px;font-weight: bold;}
 
