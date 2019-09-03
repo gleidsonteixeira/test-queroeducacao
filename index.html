@@ -79,69 +79,17 @@
                 <h6>Adicionar bolsa</h6>
                 <p>Clique para adicionar bolsas de cursos do seu interesse</p>
             </div>
-            <ul id="bolsas-selecionadas">
-                <li class="branco">
-                    <img src="img/anhanguera.png" alt="logo-anhanguera">
-                    <h6 class="curso-instituicao upper">anhanguera</h6>
-                    <h6 class="curso-nome azul-s-text">Arquitetura e Urbanismo</h6>
-                    <div class="avaliacoes">
-                        <span class="curso-nota">3.8</span>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star-half-o"></i>
-                        <i class="amarelo-p-text fa fa-star-o"></i>
-                    </div>
-                    <div class="periodo">
-                        <h6 class="upper">presencial<span></span>noite</h6>
-                        <p>Início das aulas em: 05/03/2020</p>
-                    </div>
-                    <div class="mensalidade">
-                        <h6>Mensalidade com o Quero Bolsa:</h6>
-                        <span><strike>R$ 1.487,31</strike></span>
-                        <h5><b class="verde-text">R$ 453,63</b> /mês</h5>
-                    </div>
-                    <button class="esquerda">Excluir</button>
-                    <button class="direita active">Ver oferta</button>
-                </li>
-                <li class="branco">
-                    <img src="img/anhanguera.png" alt="logo-anhanguera">
-                    <h6 class="curso-instituicao upper">anhanguera</h6>
-                    <h6 class="curso-nome azul-s-text">Design Gráfico</h6>
-                    <div class="avaliacoes">
-                        <span class="curso-nota">3.8</span>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star"></i>
-                        <i class="amarelo-p-text fa fa-star-half-o"></i>
-                        <i class="amarelo-p-text fa fa-star-o"></i>
-                    </div>
-                    <div class="periodo">
-                        <h6 class="upper">presencial<span></span>noite</h6>
-                        <p>Início das aulas em: 05/03/2020</p>
-                    </div>
-                    <div class="mensalidade">
-                        <h6>Bolsa indisponível.</h6>
-                        <p>Entre em contato com nosso atendimento para saber mais.</p>
-                    </div>
-                    <button class="esquerda">Excluir</button>
-                    <button class="direita inactive">Indisponível</button>
-                </li>
-            </ul>
+            <ul id="bolsas-selecionadas"></ul>
         </div>
-        <div class="modal">
+        <div class="modal suave">
             <form>
                 <i class="fa fa-times branco-text fechar"></i>
                 <div class="clear"></div>
-                <div class="branco box">
+                <div class="branco box suave">
                     <h4>Adicionar bolsa</h4>
                     <p>Filtre e adicione  as bolsas de seu interesse.</p>
                     <h6>Selecione sua cidade</h6>
-                    <select >
-                        <option value="1">cidade 1</option>
-                        <option value="1">cidade 2</option>
-                        <option value="1">cidade 3</option>
-                    </select>
+                    <select id="listaCidades"></select>
                     <h6>Selecione o curso de sua preferência</h6>
                     <select >
                         <option value="1">cidade 1</option>
@@ -167,40 +115,9 @@
                             <option value="1">Nome da Faculdade</option>
                         </select>
                     </div>
-                    <ul id="resultados">
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <img src="img/anhanguera.png">
-                            <div class="infos">
-                                <h6 class="curso-nome"><b class="azul-s-text">Administração</b></h6>
-                                <h6 class="curso-tipo">Bacharelado</h6>
-                                <h6 class="curso-desconto">Bolsa de <b class="verde-text">50%</b></h6>
-                                <h6 class="curso-valor"><b class="verde-text">R$ 374/mês</b></h6>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="esquerda">Cancelar</button>
-                    <button class="direita inactive">Adicionar bolsa(s)</button>
+                    <ul id="resultados"></ul>
+                    <button type="button" class="esquerda cancelar">Cancelar</button>
+                    <button type="button" class="direita inactive confirmar" disabled>Adicionar bolsa(s)</button>
                     <div class="clear"></div>
                 </div>
             </form>
@@ -235,5 +152,158 @@
         <div class="rodape branco-text">Feito com <i class="fa fa-heart branco-text"></i> pela Quero Educação</div>
     </footer>
     
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".menu-btn").click(function(){
+            $(".menu nav ul").slideToggle("fast");
+        });
+        $(".add-bolsa").click(function(){
+            $(".modal").addClass("active");
+        });
+        $(".fechar, .cancelar").click(function(){
+            $(".modal").removeClass("active");
+        });
+        $(document).on("click", "#resultados input", function(){
+            var selecionados = 0;
+            $("#resultados input").each(function(){
+                if($(this).prop("checked")){
+                    selecionados += 1;
+                }
+            });
+            if(selecionados > 0){
+                $(".modal form .confirmar").addClass("active");
+                $(".modal form .confirmar").removeClass("inactive");
+                $(".modal form .confirmar").prop("disabled", false);
+            }else{
+                $(".modal form .confirmar").addClass("inactive");
+                $(".modal form .confirmar").removeClass("active");
+                $(".modal form .confirmar").prop("disabled", true);
+            }
+        });
+        $(document).on("click", "#bolsas-selecionadas li .excluir", function(){
+            var id = $(this).attr("data-id");
+            $('#bolsas-selecionadas li[data-id='+id+']').remove();
+        });
+        function listaCursos(){
+            var link = "https://testapi.io/api/redealumni/scholarships";
+            var listaDeCursos;
+            var listaCidades = [];
+            $.get(link, function (obj) {
+                listaDeCursos = obj;
+                if(obj.length == 0){
+                    
+                }else{
+                    var resultados = document.getElementById('resultados');
+                    $("#resultados").empty();
+                    obj.forEach(function(o){
+                        var item = document.createElement('li');
+                            item.setAttribute("data-id", obj.indexOf(o));
+                            listaCidades.push(o.campus.city);
+                        var html =  '<div class="checkbox">'+
+                                        '<input type="checkbox" data-id="'+obj.indexOf(o)+'">'+
+                                    '</div>'+
+                                    '<figure>'+
+                                        '<img src="'+o.university.logo_url+'">'+
+                                    '</figure>'+
+                                    '<div class="infos">'+
+                                        '<h6 class="curso-nome"><b class="azul-s-text">'+o.course.name+'</b></h6>'+
+                                        '<h6 class="curso-tipo">'+o.course.level+'</h6>'+
+                                        '<h6 class="curso-desconto">Bolsa de <b class="verde-text">'+Math.round(o.discount_percentage)+'%</b></h6>'+
+                                        '<h6 class="curso-valor"><b class="verde-text">R$ '+Math.round(o.price_with_discount)+'/mês</b></h6>'+
+                                    '</div>';
+                        item.innerHTML = html;
+                        resultados.appendChild(item);
+                    });
+                }
+            });
+            var cidadesUnicas = [];
+            listaCidades.forEach(function(ci){
+                console.log(1);
+                // if(!cidadesUnicas.find(ci)){
+                //     cidadesUnicas.push(ci);
+                // }
+            });
+            //console.log(listaCidades);
+            //console.log(cidadesUnicas);
+            // cidadesUnicas.forEach(function(ci){
+            //     var cidades = document.getElementById('listaCidades');
+            //     var html = '<option>'+ci+'</option>';
+            //     cidades.append(html);
+            // });
+
+            $(".modal form").submit(function(e){
+                e.preventDefault();
+            });
+            $(".confirmar").click(function(){
+                $(".modal").removeClass("active");
+                var bolsasSelecionadas = document.getElementById('bolsas-selecionadas');
+                $("#bolsas-selecionadas").empty();
+                $("#resultados li").each(function(){
+                    if($(this).find("input").prop("checked")){
+                        var id = $(this).attr("data-id");
+                        var nota;
+                        var item = document.createElement('li');
+                        
+                        item.classList.add("branco");
+                        item.setAttribute("data-id", id);
+                        
+                        if(listaDeCursos[id].university.score == 0){
+                            nota = '<i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score < 1){
+                            nota = '<i class="amarelo-p-text fa fa-star-half-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score == 1){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score > 1 && listaDeCursos[id].university.score < 2){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-half-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score == 2){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score > 2 && listaDeCursos[id].university.score < 3){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-half-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score == 3){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score > 3 && listaDeCursos[id].university.score < 4){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-half-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score == 4){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-o"></i>';
+                        }else if(listaDeCursos[id].university.score > 4 && listaDeCursos[id].university.score < 5){
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star-half-o"></i>';
+                        }else{
+                            nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i>';
+                        }
+
+                        var html =  '<img src="'+listaDeCursos[id].university.logo_url+'" alt="logo-anhanguera">'+
+                                    '<h6 class="curso-instituicao upper">'+listaDeCursos[id].university.name+'</h6>'+
+                                    '<h6 class="curso-nome azul-s-text">'+listaDeCursos[id].course.name+'</h6>'+
+                                    '<div class="avaliacoes">'+
+                                        '<span class="curso-nota">'+listaDeCursos[id].university.score+'</span>'+
+                                        nota+
+                                    '</div>'+
+                                    '<div class="periodo">'+
+                                        '<h6 class="upper">'+listaDeCursos[id].course.kind+'<span></span>'+listaDeCursos[id].course.shift+'</h6>'+
+                                        '<p>Início das aulas em: '+listaDeCursos[id].start_date+'</p>'+
+                                    '</div>';
+                        if(listaDeCursos[id].enabled == true){
+                            html += '<div class="mensalidade">'+
+                                        '<h6>Mensalidade com o Quero Bolsa:</h6>'+
+                                        '<span><strike>R$ '+listaDeCursos[id].full_price.toFixed(2)+'</strike></span>'+
+                                        '<h5><b class="verde-text">R$ '+listaDeCursos[id].price_with_discount.toFixed(2)+'</b> /mês</h5>'+
+                                    '</div>'+
+                                    '<button class="esquerda excluir" data-id="'+id+'">Excluir</button>'+
+                                    '<button class="direita active">Ver oferta</button>';
+                        }else{
+                            html += '<div class="mensalidade">'+
+                                        '<h6>Bolsa indisponível.</h6>'+
+                                        '<p>Entre em contato com nosso atendimento para saber mais.</p>'+
+                                    '</div>'+
+                                    '<button class="esquerda excluir" data-id="'+id+'">Excluir</button>'+
+                                    '<button class="direita inactive">Indisponível</button>';
+                        }
+                        item.innerHTML = html;
+                        bolsasSelecionadas.appendChild(item);
+                    }
+                });
+            });
+        }listaCursos();
+    </script>
 </body>
 </html>
