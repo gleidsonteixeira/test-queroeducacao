@@ -216,6 +216,7 @@ function listaCursos(){
                 
                 item.classList.add("branco");
                 item.setAttribute("data-id", id);
+                item.setAttribute("data-semestre", listaDeCursos[id].enrollment_semester);
                 
                 if(listaDeCursos[id].university.score == 0){
                     nota = '<i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i><i class="amarelo-p-text fa fa-star-o"></i>';
@@ -276,3 +277,22 @@ function listaCursos(){
         });
     });
 }listaCursos();
+
+function filtroSemestre(){
+    $(".semestres li").click(function(){
+        $(".semestres li").removeClass("active");
+        $(this).addClass("active");
+
+        var semestreSelecionado = $(this).attr("data-semestre");
+        $("#bolsas-selecionadas li").removeClass("off");
+        $("#bolsas-selecionadas li").each(function(){
+            var semestre = $(this).attr("data-semestre");
+            if(semestreSelecionado != semestre){
+                $(this).addClass("off");
+            }
+            if(semestreSelecionado == ''){
+                $(this).removeClass("off");
+            }
+        });
+    });
+}filtroSemestre();
