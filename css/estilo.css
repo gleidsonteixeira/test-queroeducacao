@@ -227,7 +227,7 @@ footer .grande{display: none !important;}
     main .semestres ul li:last-child{border-radius: 0 5px 5px 0;}
 
     main .bolsas{position: relative;padding-bottom: 30px;overflow: hidden;}
-    main .bolsas .add-bolsa{box-sizing: border-box;width: calc(25% - 20px);margin: 0 10px;padding: 189px 30px;margin-top: 16px;float: left;}
+    main .bolsas .add-bolsa{height: 550px;box-sizing: border-box;width: calc(25% - 20px);margin: 0 10px;padding: 189px 30px;margin-top: 16px;float: left;}
     main .bolsas .add-bolsa p{font-size: 12px;}
     main .bolsas ul{position: relative;top: 0;left: 0;width: 100%;}
     main .bolsas ul li{width: calc(25% - 20px);float: left;margin: 0 10px;}
@@ -235,6 +235,8 @@ footer .grande{display: none !important;}
     main .bolsas #bolsas-selecionadas li figure{height: 140px;position: relative;}
     main .bolsas #bolsas-selecionadas li figure img{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
     main .bolsas #bolsas-selecionadas li .mensalidade p{margin-bottom: 9px;}
+    main .bolsas #bolsas-selecionadas li button{padding: 0 25px;margin-top: 6px;}
+    main .bolsas #bolsas-selecionadas li .mensalidade h6{margin-bottom: 16px;}
 
     .modal{overflow: auto;}
     .modal form{width: 600px;position: absolute;top: 0;left: calc(50% - 300px);}
@@ -250,9 +252,9 @@ footer .grande{display: none !important;}
     .modal .box #resultados li .infos .metade.esquerda{padding-left: 16px;}
     .modal .box #resultados li .infos .metade.direita{text-align: right;}
     .modal .box button{margin-bottom: 0;margin-left: 16px;float: right !important;}
-    .modal form .metade{width: calc(50% - 8px);}
-    .modal form .metade.esquerda{float: left;}
-    .modal form .metade.direita{float: right;}
+    .modal .box .metade{width: calc(50% - 8px);}
+    .modal .box .metade.esquerda{float: left;}
+    .modal .box .metade.direita{float: right;}
     .modal form .pequeno{display: none;}
     .modal form .grande{display: block;}
 
