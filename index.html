@@ -26,7 +26,12 @@
     <header class="branco">
         <div class="ajuda">
             <i class="fa fa-info-circle azul-s-text"></i>
-            <span class="azul-s-text">Ajuda</span>
+            <span class="azul-s-text pequeno">Ajuda</span>
+            <span class="azul-s-text grande">Como Funciona</span>
+        </div>
+        <div class="whatsapp grande">
+            <i class="fa fa-whatsapp verde-text"></i>
+            <span class="azul-s-text"><b>0800 123 2222</b>Envie mensagem ou ligue</span>
         </div>
         <div class="logo">
             <figure>
@@ -35,7 +40,8 @@
         </div>
         <div class="conta">
             <i class="fa fa-user-circle-o azul-s-text"></i>
-            <span class="azul-s-text">Conta</span>
+            <span class="azul-s-text grande">Nome sobrenome</span>
+            <span class="azul-s-text pequeno">Conta</span>
         </div>
     </header>
     <div class="menu azul-p">
@@ -48,17 +54,28 @@
                 <li>
                     <a href="#!">Pré-matrículas</a>
                 </li>
-                <li>
-                    <a href="#!" class="active">Bolsas favoritas</a>
+                <li class="active">
+                    <a href="#!">Bolsas favoritas</a>
                 </li>
             </ul>
         </nav>
     </div>
     <main>
         <div class="breadcrumb">
-            <ul>
+            <ul class="pequeno">
                 <li>
                     <a href="#!"><i class="fa fa-chevron-left"></i> <b>Minha conta</b></a>
+                </li>
+            </ul>
+            <ul class="grande">
+                <li>
+                    <a href="#!"><b>Home / </b></a>
+                </li>
+                <li>
+                    <a href="#!"><b>Minha conta / </b></a>
+                </li>
+                <li>
+                    <a href="#!"><b>Bolsas favoritas</b></a>
                 </li>
             </ul>
         </div>
@@ -88,23 +105,37 @@
                 <div class="branco box suave">
                     <h4>Adicionar bolsa</h4>
                     <p>Filtre e adicione  as bolsas de seu interesse.</p>
-                    <h6>Selecione sua cidade</h6>
-                    <select id="listaCidades"></select>
-                    <h6>Selecione o curso de sua preferência</h6>
-                    <select id="listaCursos"></select>
-                    <h6>Como você quer estudar</h6>
-                    <div class="opcao">
-                        <input type="checkbox" checked="checked" class="presencial">
-                        Presencial
+                    <div class="metade esquerda">
+                        <h6>Selecione sua cidade</h6>
+                        <select id="listaCidades"></select>
                     </div>
-                    <div class="opcao">
-                        <input type="checkbox" checked="checked" class="ead">
-                        A distância
+                    <div class="metade direita">
+                        <h6>Selecione o curso de sua preferência</h6>
+                        <select id="listaCursos"></select>
                     </div>
                     <div class="clear"></div>
-                    <h6>Até quanto você pode pagar?</h6>
-                    <p class="valor-max">R$ <span>10.000</span></p>
-                    <input type="range" min="0" max="10000" value="10000" class="valor-max-input">
+                    <div class="metade esquerda">
+                        <h6>Como você quer estudar</h6>
+                        <div class="opcao">
+                            <span class="active">
+                                <input type="checkbox" checked="checked" class="presencial">
+                            </span>
+                            Presencial
+                        </div>
+                        <div class="opcao">
+                            <span class="active">
+                                <input type="checkbox" checked="checked" class="ead">
+                            </span>
+                            A distância
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="metade direita">
+                        <h6>Até quanto você pode pagar?</h6>
+                        <p class="valor-max">R$ <span>10.000</span></p>
+                        <input type="range" min="0" max="10000" value="10000" class="valor-max-input">
+                    </div>
+                    <div class="clear"></div>
                     <h6>Resultado: <span class="direita">Ordenar por</span></h6>
                     <div class="filtro">
                         <select>
@@ -112,8 +143,9 @@
                         </select>
                     </div>
                     <ul id="resultados"></ul>
-                    <button type="button" class="esquerda cancelar">Cancelar</button>
+                    <button type="button" class="esquerda cancelar pequeno">Cancelar</button>
                     <button type="button" class="direita inactive confirmar" disabled>Adicionar bolsa(s)</button>
+                    <button type="button" class="esquerda cancelar grande">Cancelar</button>
                     <div class="clear"></div>
                 </div>
             </form>
@@ -126,22 +158,29 @@
                     <i class="fa fa-whatsapp"></i>
                     <a href="tel:+558508001232222">
                         <b>0800 123 2222</b>
-                        <h6>Segunda a sexta de 8h às 22h</h6>
+                        <h6 class="pequeno">Segunda a sexta de 8h às 22h</h6>
+                        <h6 class="grande">Seg - Sex 8h - 22h</h6>
                     </a>
                 </li>
                 <li class="azul-s">
                     <i class="fa fa-comments"></i>
-                    <b>Chat</b>
+                    <b class="pequeno">Chat</b>
+                    <b class="grande">Chat ao vivo</b>
+                    <h6 class="grande">Seg - Sex 8h - 22h</h6>
                 </li>
                 <li class="azul-s">
                     <i class="fa fa-envelope"></i>
                     <a href="mailto:contato@queroeducacao.com.br">
-                        <b>Email</b>
+                        <b class="pequeno">Email</b>
+                        <b class="grande">Mande um e-mail</b>
+                        <h6 class="grande">Responderemos rapidinho</h6>
                     </a>
                 </li>
                 <li class="azul-s">
                     <i class="fa fa-info-circle"></i>
-                    <b>Ajuda</b>
+                    <b class="pequeno">Ajuda</b>
+                    <b class="grande">Central de ajuda</b>
+                    <h6 class="grande">Encontre todas as respostas</h6>
                 </li>
             </ul>
         </div>

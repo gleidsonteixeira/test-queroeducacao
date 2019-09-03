@@ -16,6 +16,7 @@ $(".fechar, .cancelar").click(function(){
 //VERIFICA SE TEM CHECKBOX MARCADOS PARA HABILITAR O BOTÃO "CONFIRMAR"
 $(document).on("click", "#resultados input", function(){
     var selecionados = 0;
+    $(this).offsetParent().toggleClass("active");
     $("#resultados input").each(function(){
         if($(this).prop("checked")){
             selecionados += 1;
@@ -76,10 +77,15 @@ function listaCursos(){
                                 '<img src="'+o.university.logo_url+'">'+
                             '</figure>'+
                             '<div class="infos">'+
-                                '<h6 class="curso-nome"><b class="azul-s-text">'+o.course.name+'</b></h6>'+
-                                '<h6 class="curso-tipo">'+o.course.level+'</h6>'+
-                                '<h6 class="curso-desconto">Bolsa de <b class="verde-text">'+Math.round(o.discount_percentage)+'%</b></h6>'+
-                                '<h6 class="curso-valor"><b class="verde-text">R$ '+Math.round(o.price_with_discount)+'/mês</b></h6>'+
+                                '<div class="metade esquerda">'+
+                                    '<h6 class="curso-nome"><b class="azul-s-text">'+o.course.name+'</b></h6>'+
+                                    '<h6 class="curso-tipo">'+o.course.level+'</h6>'+
+                                '</div>'+
+                                '<div class="metade direita">'+
+                                    '<h6 class="curso-desconto">Bolsa de <b class="verde-text">'+Math.round(o.discount_percentage)+'%</b></h6>'+
+                                    '<h6 class="curso-valor"><b class="verde-text">R$ '+Math.round(o.price_with_discount)+'/mês</b></h6>'+
+                                '</div>'+
+                                '<div class="clear"></div>'+
                             '</div>';
                 item.innerHTML = html;
                 resultados.appendChild(item);
@@ -149,6 +155,7 @@ function listaCursos(){
         });
         //FILTRA POR TIPO PRESENCIAL
         $(".presencial").click(function(){
+            $(this).offsetParent().toggleClass("active");
             if($(this).prop("checked")){
                 $("#resultados li.city-on[data-tipo=Presencial]").removeClass("presencial-off");
                 $("#resultados li.city-on[data-tipo=Presencial]").addClass("presencial-on");
@@ -159,6 +166,7 @@ function listaCursos(){
         });
         //FILTRA POR TIPO EAD
         $(".ead").click(function(){
+            $(this).offsetParent().toggleClass("active");
             if($(this).prop("checked")){
                 $("#resultados li.city-on[data-tipo=EaD]").removeClass("ead-off");
                 $("#resultados li.city-on[data-tipo=EaD]").addClass("ead-on");
@@ -233,7 +241,9 @@ function listaCursos(){
                     nota = '<i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i><i class="amarelo-p-text fa fa-star"></i>';
                 }
 
-                var html =  '<img src="'+listaDeCursos[id].university.logo_url+'" alt="logo-anhanguera">'+
+                var html =  '<figure>'+
+                                '<img src="'+listaDeCursos[id].university.logo_url+'" alt="logo-anhanguera">'+
+                            '</figure>'+
                             '<h6 class="curso-instituicao upper">'+listaDeCursos[id].university.name+'</h6>'+
                             '<h6 class="curso-nome azul-s-text">'+listaDeCursos[id].course.name+'</h6>'+
                             '<div class="avaliacoes">'+
